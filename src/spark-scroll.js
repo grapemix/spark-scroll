@@ -270,7 +270,7 @@
         // see: https://github.com/gilbox/spark-scroll/issues/14
         var ratio = Math.max(0, Math.min((y - minScrollY) / (maxScrollY - minScrollY), 1));
         if (ratio !== prevRatio) {
-          callback(ratio);
+          callback(triggerElement, ratio);
         }
         return prevRatio = ratio;
       };
